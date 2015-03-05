@@ -7,8 +7,7 @@ class Kryptnostic < Formula
   depends_on :java
 
   def install
-    bin.install "bin/kryptnostic-cli.sh"
-    lib.install Dir["lib/*.jar"]
+    prefix.install "bin/kryptnostic-cli"
   end
 
   test do
