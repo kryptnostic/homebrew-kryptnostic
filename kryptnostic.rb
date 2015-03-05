@@ -8,6 +8,7 @@ class Kryptnostic < Formula
 
   def install
     prefix.install "bin/kryptnostic-cli"
+    lib.install "lib/*.jar"
   end
 
   test do
