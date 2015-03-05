@@ -9,7 +9,7 @@ class Kryptnostic < Formula
   def install
     prefix.install "bin/kryptnostic-cli"
     lib.install Dir["./lib/*.jar"]
-    (HOMEBREW_PREFIX/"bin").install_symlink "kryptnostic-cli" => "kryptnostic"
+    (HOMEBREW_PREFIX/"bin").install_symlink prefix/"kryptnostic-cli" => "kryptnostic"
   end
 
   test do
