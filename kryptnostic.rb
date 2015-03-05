@@ -1,0 +1,17 @@
+class Kryptnostic < Formula
+  homepage "http://www.kryptnostic.com"
+  url "http://www.kryptnostic.com/download/kryptnostic-cli-0.0.0.zip"
+  version "0.0.0"
+  sha1 "d9b01eaaa088bc04726aa6fd0a69ed13bdb47227"
+
+  depends_on :java
+
+  def install
+    bin.install "bin/kryptnostic-cli.sh"
+    lib.install Dir["lib/*.jar"]
+  end
+
+  test do
+    system "kryptnostic-cli"
+  end
+end
