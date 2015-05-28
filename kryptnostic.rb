@@ -2,7 +2,7 @@ class Kryptnostic < Formula
   homepage "https://www.kryptnostic.com"
   url "https://www.kryptnostic.com/download/kryptnostic-cli-1.1.0.zip"
   version "1.1.0"
-  sha1 "2dac134f4f866c9377ac3c07331222a64c1465bd"
+  sha1 "e168928ce66bed29521f032b8314fefeb3dd4fb8"
 
   depends_on :java
 
