@@ -7,11 +7,11 @@ class Kryptnostic < Formula
   depends_on :java
 
   def install
-    inreplace "bin/kryptnostic-cli", /APP_HOME="`pwd -P`"/, "APP_HOME=\"#{libexec}\""
-    inreplace "bin/kryptnostic-cli", /\$APP_HOME\/lib\//, "$APP_HOME/"
-    prefix.install "bin/kryptnostic-cli"
+    inreplace "bin/cli", /APP_HOME="`pwd -P`"/, "APP_HOME=\"#{libexec}\""
+    inreplace "bin/cli", /\$APP_HOME\/lib\//, "$APP_HOME/"
+    prefix.install "bin/cli"
     libexec.install Dir["./lib/*.jar"]
-    (HOMEBREW_PREFIX/"bin").install_symlink prefix/"kryptnostic-cli" => "kryptnostic"
+    (HOMEBREW_PREFIX/"bin").install_symlink prefix/"cli" => "kryptnostic"
   end
 
   test do
